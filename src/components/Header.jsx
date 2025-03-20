@@ -1,9 +1,13 @@
+import { Link, NavLink } from "react-router";
+
 export default function Header() {
   return (
     <header>
-      <h1>Find your film</h1>
+      <Link to="/" className="logo-find">
+        Find your film
+      </Link>
       <nav>
-        <span>My Watchlist</span>
+        <NavLink to="/mywatchlist">My Watchlist</NavLink>
       </nav>
     </header>
   );
