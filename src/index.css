@@ -66,5 +66,12 @@ nav {
   z-index: 3;
 }
 
+form {
+  transform: translateY(-50%);
+  position: relative;
+  z-index: 3;
+  text-align: center;
+}
+
 /* Media Queries */
 /* Abjust the header spacing on wide screens */

@@ -9,7 +9,7 @@ export default function Home() {
   }
 
   return (
-    <section>
+    <section className="movie-search">
       <form action="" onSubmit={handleSubmit}>
         <input
           type="text"
