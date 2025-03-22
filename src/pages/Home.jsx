@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 export default function Home() {
   const [inputValue, setInputValue] = useState("");
@@ -12,6 +14,7 @@ export default function Home() {
     <section className="movie-search">
       <div className="form-container">
         <form action="" onSubmit={handleSubmit}>
+          <FontAwesomeIcon icon={faMagnifyingGlass} className="search-icon" />
           <input
             type="text"
             value={inputValue}

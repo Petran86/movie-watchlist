@@ -77,15 +77,27 @@ nav {
   max-width: 600px;
   position: relative;
   margin: 0 auto;
-  transform: translateY(-60%);
+  transform: translateY(-50%);
   z-index: 3;
 }
 
 form input {
   width: 100%;
-  border: 2px solid green;
+  border: 2px solid #D1D5DB;
   border-radius: 5px;
   outline: none;
+  padding: 0.6em 0 0.6em 3em;
+  font-size: 0.8rem;
+  color: #6B7280;
+}
+
+.search-icon {
+  position: absolute;
+  bottom: 25%;
+  padding-left: 0.7em;
+  width: 20px;
+  height: 20px;
+  color: #9CA3AF;
 }
 
 form button {
@@ -94,7 +106,20 @@ form button {
   top: 0;
   bottom: 0;
   border: none;
+  border: 2px solid #D1D5DB;
   border-radius: 0 5px 5px 0;
+  height: 100%;
+  padding: 0 1em;
+  font-family: inherit;
+  font-size: 0.8rem;
+  color: #374151;
+  background-color: #F9FAFB;
+  cursor: pointer;
+}
+
+form button:hover,
+form button:focus {
+  font-weight: 700;
 }
 
 /* Media Queries */
@@ -106,5 +131,11 @@ form button {
 
   .page-title {
     font-size: 2.7rem;
+  }
+
+  header a:hover,
+  header a:focus {
+    color: lightyellow;
+    font-size: 1rem;
   }
 }
