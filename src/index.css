@@ -50,14 +50,20 @@ header a {
   text-decoration: none;
   color: #ffffff;
   cursor: pointer;
-  font-size: 0.875rem;
+  font-size: 0.8rem;
   font-weight: 700;
   z-index: 3;
 }
 
+header a:hover,
+header a:focus {
+  color: lightyellow;
+  font-size: 0.85rem;
+}
+
 .page-title {
   color: #ffffff;
-  font-size: 2.675rem;
+  font-size: 1.3rem;
   font-weight: 800;
   z-index: 3;
 }
@@ -66,12 +72,39 @@ nav {
   z-index: 3;
 }
 
-form {
-  transform: translateY(-50%);
+.form-container {
+  width: 80%;
+  max-width: 600px;
   position: relative;
+  margin: 0 auto;
+  transform: translateY(-60%);
   z-index: 3;
-  text-align: center;
+}
+
+form input {
+  width: 100%;
+  border: 2px solid green;
+  border-radius: 5px;
+  outline: none;
+}
+
+form button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border: none;
+  border-radius: 0 5px 5px 0;
 }
 
 /* Media Queries */
-/* Abjust the header spacing on wide screens */
+/* Abjust the header spacing and size on wide screens */
+@media(min-width: 480px) {
+  header a {
+    font-size: 0.9rem;
+  }
+
+  .page-title {
+    font-size: 2.7rem;
+  }
+}

@@ -10,15 +10,17 @@ export default function Home() {
 
   return (
     <section className="movie-search">
-      <form action="" onSubmit={handleSubmit}>
-        <input
-          type="text"
-          value={inputValue}
-          onChange={(e) => setInputValue(e.target.value)}
-          placeholder="Search for a movie"
-        />
-        <button>Search</button>
-      </form>
+      <div className="form-container">
+        <form action="" onSubmit={handleSubmit}>
+          <input
+            type="text"
+            value={inputValue}
+            onChange={(e) => setInputValue(e.target.value)}
+            placeholder="Search for a movie"
+          />
+          <button>Search</button>
+        </form>
+      </div>
     </section>
   );
 }
