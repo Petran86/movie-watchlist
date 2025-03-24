@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+// import nodata from "../images/no-data-initial.png";
 
 export default function Home() {
   const [inputValue, setInputValue] = useState("");
+  const [error, setError] = useState("");
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -24,6 +26,7 @@ export default function Home() {
           <button>Search</button>
         </form>
       </div>
+      {/* <img src={nodata} alt="" className="no-data-img" /> */}
     </section>
   );
 }
