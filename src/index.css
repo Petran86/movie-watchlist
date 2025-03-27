@@ -152,15 +152,25 @@ form button:focus {
   margin-bottom: 1em;
 }
 
+.star-icon {
+  color: #FEC654;
+  width: 15px;
+  height: 15px;
+}
+
+.movie-title span {
+  font-size: 0.75rem;
+  color: #111827;
+}
+
 .movie-details {
-  display: flex;
-  justify-content: space-between;
   margin-bottom: 1em;
 }
 
 .movie-details span {
   color: #111827;
   font-size: 0.75rem;
+  margin-right: 1em;
 }
 
 .movie-watchlist-btn {
@@ -188,7 +198,7 @@ form button:focus {
 } */
 
 /* Media Queries */
-/* Abjust the header spacing and size on wide screens */
+/* Abjust the header spacing and size on wide screens. Also adjust the lists */
 @media(min-width: 480px) {
   header a {
     font-size: 0.9rem;
@@ -200,7 +210,6 @@ form button:focus {
 
   header a:hover,
   header a:focus {
-    color: lightyellow;
     font-size: 1rem;
   }
 }
