@@ -1,7 +1,12 @@
 import { useState } from "react";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMagnifyingGlass, faStar } from "@fortawesome/free-solid-svg-icons";
+import {
+  faMagnifyingGlass,
+  faStar,
+  faCirclePlus,
+  faCircleMinus,
+} from "@fortawesome/free-solid-svg-icons";
 // import nodata from "../images/no-data-initial.png";
 
 const API_KEY = "fb9e9854"; //OMDB key
@@ -10,9 +15,11 @@ const BASE_URL = "http://www.omdbapi.com/";
 export default function Home() {
   const [inputValue, setInputValue] = useState("");
   const [movies, setMovies] = useState([]);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
   async function searchMovies(search) {
+    setLoading(true);
     try {
       const res = await axios.get(BASE_URL, {
         params: {
@@ -50,8 +57,9 @@ export default function Home() {
       }
     } catch (err) {
       setError(`Something went wrong. ${err}`);
-      console.log(err);
       setMovies([]);
+    } finally {
+      setLoading(false);
     }
   }
 
@@ -73,7 +81,10 @@ export default function Home() {
         <div className="movie-details">
           <span>{movie.runtime}</span>
           <span>{movie.genres}</span>
-          <button className="movie-watchlist-btn">Watchlist</button>
+          <button className="movie-watchlist-btn">
+            <FontAwesomeIcon icon={faCirclePlus} />
+            Watchlist
+          </button>
         </div>
         <p className="movie-overview">{movie.plot}</p>
       </div>
@@ -94,7 +105,8 @@ export default function Home() {
           <button>Search</button>
         </form>
       </div>
-      {error && <p className="error-message">{error}</p>}
+      {loading && <p className="status">Loading...</p>}
+      {error && <p className="status">{error}</p>}
       {movies && movieEl}
       {/* <img src={nodata} alt="" className="no-data-img" /> */}
     </section>
