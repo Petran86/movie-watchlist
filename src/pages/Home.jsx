@@ -10,7 +10,7 @@ import {
 // import nodata from "../images/no-data-initial.png";
 
 const API_KEY = "fb9e9854"; //OMDB key
-const BASE_URL = "http://www.omdbapi.com/";
+const BASE_URL = "https://www.omdbapi.com/";
 
 export default function Home() {
   const [inputValue, setInputValue] = useState("");
