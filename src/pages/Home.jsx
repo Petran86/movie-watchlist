@@ -7,7 +7,7 @@ import {
   faCirclePlus,
   faCircleMinus,
 } from "@fortawesome/free-solid-svg-icons";
-// import nodata from "../images/no-data-initial.png";
+import nodata from "../images/no-data-initial.png";
 
 const API_KEY = "fb9e9854"; //OMDB key
 const BASE_URL = "https://www.omdbapi.com/";
@@ -82,7 +82,10 @@ export default function Home() {
           <span>{movie.runtime}</span>
           <span>{movie.genres}</span>
           <button className="movie-watchlist-btn">
-            <FontAwesomeIcon icon={faCirclePlus} />
+            <FontAwesomeIcon
+              icon={faCirclePlus}
+              className="watchlist-btn-icon"
+            />
             Watchlist
           </button>
         </div>
@@ -108,7 +111,8 @@ export default function Home() {
       {loading && <p className="status">Loading...</p>}
       {error && <p className="status">{error}</p>}
       {movies && movieEl}
-      {/* <img src={nodata} alt="" className="no-data-img" /> */}
+      {!movies && <img src={nodata} alt="" className="no-data-img" />}
     </section>
   );
 }
+// Maybe use dynamic styles for background image

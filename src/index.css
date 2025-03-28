@@ -136,6 +136,7 @@ form button:focus {
   border-bottom: 2px solid #E5E7EB;
   margin: 0 1em;
   padding: 1em 0;
+  /* max-width: 800px; */
 }
 
 .movie-container img {
@@ -165,20 +166,32 @@ form button:focus {
 
 .movie-details {
   margin-bottom: 1em;
+  /* display: flex; */
+  /* align-items: center; */
 }
 
 .movie-details span {
   color: #111827;
   font-size: 0.75rem;
   margin-right: 1em;
+  flex-wrap: nowrap;
 }
 
 .movie-watchlist-btn {
   font-family: inherit;
   color: #111827;
+  background-color: #ffffff;
   font-size: 0.75rem;
   border: none;
   cursor: pointer;
+  /* padding: 0.3em 0.8em; */
+  /* display: flex; */
+}
+
+.watchlist-btn-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 0.5em;
 }
 
 .movie-overview {
@@ -191,11 +204,11 @@ form button:focus {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
+} */
 
 .no-data-img {
   margin-top: 15em;
-} */
+}
 
 /* Media Queries */
 /* Abjust the header spacing and size on wide screens. Also adjust the lists */
