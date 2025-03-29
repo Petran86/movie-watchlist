@@ -34,7 +34,7 @@ export default function MyWatchlist({ watchlist, removeFromWatchlist }) {
     </div>
   ));
   return (
-    <section>
+    <section className="movie-search">
       {watchlist.length === 0 ? (
         <div className="watchlist">
           <p className="status">Your watchlist is looking a little empty...</p>
