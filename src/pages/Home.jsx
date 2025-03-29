@@ -5,18 +5,24 @@ import {
   faMagnifyingGlass,
   faStar,
   faCirclePlus,
-  faCircleMinus,
 } from "@fortawesome/free-solid-svg-icons";
 import nodata from "../images/no-data-initial.png";
 
 const API_KEY = "fb9e9854"; //OMDB key
 const BASE_URL = "https://www.omdbapi.com/";
 
-export default function Home() {
+export default function Home({ addToWatchlist }) {
   const [inputValue, setInputValue] = useState("");
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+
+  const styles = {
+    backgroundImage:
+      movies.length === 0 && error === "" ? `url(${nodata})` : "",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+  };
 
   async function searchMovies(search) {
     setLoading(true);
@@ -53,7 +59,7 @@ export default function Home() {
         setError("");
       } else {
         setMovies([]);
-        setError("No movies found. Try a different title");
+        setError("No movies found. Try a different title.");
       }
     } catch (err) {
       setError(`Something went wrong. ${err}`);
@@ -81,7 +87,10 @@ export default function Home() {
         <div className="movie-details">
           <span>{movie.runtime}</span>
           <span>{movie.genres}</span>
-          <button className="movie-watchlist-btn">
+          <button
+            className="movie-watchlist-btn"
+            onClick={() => addToWatchlist(movie)}
+          >
             <FontAwesomeIcon
               icon={faCirclePlus}
               className="watchlist-btn-icon"
@@ -95,7 +104,7 @@ export default function Home() {
   ));
 
   return (
-    <section className="movie-search">
+    <section className="movie-search" style={styles}>
       <div className="form-container">
         <form action="" onSubmit={handleSubmit}>
           <FontAwesomeIcon icon={faMagnifyingGlass} className="search-icon" />
@@ -111,8 +120,6 @@ export default function Home() {
       {loading && <p className="status">Loading...</p>}
       {error && <p className="status">{error}</p>}
       {movies && movieEl}
-      {!movies && <img src={nodata} alt="" className="no-data-img" />}
     </section>
   );
 }
-// Maybe use dynamic styles for background image

@@ -130,6 +130,10 @@ form button:focus {
 }
 
 /* MOVIE CONTAINERS STYLES */
+.movie-search {
+  height: 70vh;
+}
+
 .movie-container {
   display: flex;
   gap: 1em;
@@ -199,16 +203,35 @@ form button:focus {
   font-size: 0.875rem;
 }
 
+.watchlist {
+  text-align: center;
+}
+
+.watchlist-link {
+  color: #363636;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.watchlist-link:hover {
+  text-decoration: underline;
+  font-size: 1rem;
+}
+
+.status {
+  color: #DFDDDD;
+  text-align: center;
+  margin-top: 10em;
+  margin-bottom: 1em;
+}
+
 /* .movie-search {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 } */
-
-.no-data-img {
-  margin-top: 15em;
-}
 
 /* Media Queries */
 /* Abjust the header spacing and size on wide screens. Also adjust the lists */
@@ -224,5 +247,9 @@ form button:focus {
   header a:hover,
   header a:focus {
     font-size: 1rem;
+  }
+
+  .movie-search {
+    background-size: 250px 150px;
   }
 }
