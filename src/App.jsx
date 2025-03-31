@@ -3,6 +3,8 @@ import { BrowserRouter, Routes, Route } from "react-router";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import MyWatchlist from "./pages/MyWatchlist";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
 
 export default function App() {
   const [watchlist, setWatchlist] = useState([]);
@@ -25,6 +27,8 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home addToWatchlist={addToWatchlist} />} />
+          <Route path="login" element={<Login />} />
+          <Route path="register" element={<Register />} />
           <Route
             path="mywatchlist"
             element={

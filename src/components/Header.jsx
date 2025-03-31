@@ -15,6 +15,7 @@ export default function Header() {
         <NavLink to={isHomePage ? "/mywatchlist" : "/"}>
           {isHomePage ? "My Watchlist" : "Search for movies"}
         </NavLink>
+        <NavLink to="login">Login</NavLink>
       </nav>
     </header>
   );
