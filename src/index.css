@@ -328,6 +328,11 @@ form button:focus {
     font-size: 1rem;
   }
 
+  .form-container input,
+  .form-container button {
+    font-size: 1rem;
+  }
+
   .movie-search {
     background-size: 250px 150px;
     padding: 0 2em;
