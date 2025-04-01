@@ -33,6 +33,7 @@ export default function MyWatchlist({ watchlist, removeFromWatchlist }) {
       </div>
     </div>
   ));
+
   return (
     <section className="movie-search">
       {watchlist.length === 0 ? (
