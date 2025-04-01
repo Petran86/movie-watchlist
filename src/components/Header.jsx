@@ -5,12 +5,16 @@ export default function Header() {
   // and dynamicly change the h1 and the NavLink
   const location = useLocation();
   const isHomePage = location.pathname === "/";
+  const pageInfo = {
+    "/": "Find your film",
+    "/mywatchlist": "My Watchlist",
+    "/login": "Login",
+    "/register": "Register",
+  };
 
   return (
     <header>
-      <h1 className="page-title">
-        {isHomePage ? "Find your film" : "My Watchlist"}
-      </h1>
+      <h1 className="page-title">{pageInfo[location.pathname]}</h1>
       <nav>
         <NavLink to={isHomePage ? "/mywatchlist" : "/"}>
           {isHomePage ? "My Watchlist" : "Search for movies"}
