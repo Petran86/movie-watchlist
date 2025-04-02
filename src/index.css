@@ -301,6 +301,12 @@ form button:focus {
   font-weight: 700;
 }
 
+.login-error {
+  color: red;
+  font-size: 1.3rem;
+  margin-bottom: 1em;
+}
+
 /* .movie-search {
   display: flex;
   flex-direction: column;
