@@ -1,6 +1,6 @@
 import { NavLink, useLocation } from "react-router";
 
-export default function Header() {
+export default function Header({ user, logoutUser }) {
   // With useLocation() we check if the user is on the Home page
   // and dynamicly change the h1 and the NavLink
   const location = useLocation();
@@ -19,7 +19,11 @@ export default function Header() {
         <NavLink to={isHomePage ? "/mywatchlist" : "/"}>
           {isHomePage ? "My Watchlist" : "Search for movies"}
         </NavLink>
-        <NavLink to="login">Login</NavLink>
+        {user ? (
+          <button onClick={logoutUser}>Logout</button>
+        ) : (
+          <NavLink to="login">Login</NavLink>
+        )}
       </nav>
     </header>
   );
