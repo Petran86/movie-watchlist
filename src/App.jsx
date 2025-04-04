@@ -66,7 +66,7 @@ export default function App() {
           <Route index element={<Home addToWatchlist={addToWatchlist} />} />
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
-          <Route element={<PrivateRoute />}>
+          <Route element={<PrivateRoute user={user} />}>
             <Route
               path="mywatchlist"
               element={

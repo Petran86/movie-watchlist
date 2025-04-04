@@ -84,6 +84,15 @@ nav {
   z-index: 3;
 }
 
+.logout-btn {
+  margin-left: 0.5em;
+  font-family: inherit;
+  font-weight: 700;
+  padding: 0.3em;
+  background: none;
+  color: #D1D5DB;
+}
+
 /******** HOME STYLES ********/
 /* SEARCH FORM STYLES */
 .form-container {

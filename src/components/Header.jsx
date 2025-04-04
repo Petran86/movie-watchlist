@@ -20,7 +20,9 @@ export default function Header({ user, logoutUser }) {
           {isHomePage ? "My Watchlist" : "Search for movies"}
         </NavLink>
         {user ? (
-          <button onClick={logoutUser}>Logout</button>
+          <button className="logout-btn" onClick={logoutUser}>
+            Logout
+          </button>
         ) : (
           <NavLink to="login">Login</NavLink>
         )}

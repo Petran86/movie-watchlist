@@ -17,6 +17,7 @@ export default function Register() {
       navigate("/login");
     } catch (err) {
       setError(err);
+      console.error(err);
     }
   }
 

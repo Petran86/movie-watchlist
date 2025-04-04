@@ -1,10 +1,10 @@
 import { Outlet } from "react-router";
 import Header from "./Header";
 
-export default function Layout() {
+export default function Layout({ user, logoutUser }) {
   return (
     <div className="container">
-      <Header />
+      <Header user={user} logoutUser={logoutUser} />
       <main>
         <Outlet />
       </main>
