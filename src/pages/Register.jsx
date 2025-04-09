@@ -46,7 +46,7 @@ export default function Register() {
           placeholder="p@p.com"
           required
         />
-        <label htmlFor="password">Password</label>
+        <label htmlFor="password">Password(at least 6 characters)</label>
         <input
           type="password"
           name="password"
