@@ -316,6 +316,15 @@ form button:focus {
   margin-bottom: 1em;
 }
 
+/* 404 PAGE STYLES */
+.not-found-container {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 10em;
+  text-align: center;
+  border: 2px solid red;
+}
+
 /* .movie-search {
   display: flex;
   flex-direction: column;

@@ -5,13 +5,14 @@ import {
   logoutUser,
   getWatchlist,
   updateWatchlist,
-} from "../api";
+} from "../firebase";
 import Layout from "./components/Layout";
 import PrivateRoute from "./components/PrivateRoute";
 import Home from "./pages/Home";
 import MyWatchlist from "./pages/MyWatchlist";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import NotFound from "./pages/NotFound";
 
 export default function App() {
   const [user, setUser] = useState(null);
@@ -77,6 +78,7 @@ export default function App() {
               }
             />
           </Route>
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </BrowserRouter>

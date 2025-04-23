@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
-import { registerUser } from "../../api";
+import { registerUser } from "../../firebase";
 
 export default function Register() {
   const [userName, setUserName] = useState("");

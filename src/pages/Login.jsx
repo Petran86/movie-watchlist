@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router";
-import { loginUser } from "../../api";
+import { loginUser } from "../../firebase";
 
 export default function Login() {
   const [email, setEmail] = useState("");
