@@ -322,7 +322,27 @@ form button:focus {
   margin: 0 auto;
   margin-top: 10em;
   text-align: center;
-  border: 2px solid red;
+}
+
+.not-found-container h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1em;
+}
+
+.not-found-container a {
+  color: #6B7280;
+  background-color: #F9FAFB;
+  border: 2px solid #D1D5DB;
+  border-radius: 5px;
+  padding: 0.5em;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.not-found-container a:hover,
+.not-found-container a:focus {
+  font-weight: 700;
+  border-color: #6B7280;
 }
 
 /* .movie-search {
@@ -390,5 +410,9 @@ form button:focus {
 
   .login-section-register a {
     font-size: 1.2rem;
+  }
+
+  .not-found-container h1 {
+    font-size: 2rem;
   }
 }
