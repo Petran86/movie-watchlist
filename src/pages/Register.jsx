@@ -11,6 +11,10 @@ export default function Register() {
 
   async function handleSubmit(e) {
     e.preventDefault();
+    if (password.length < 6) {
+      setError("Password must be at least 6 characters long!");
+      return;
+    }
     try {
       await registerUser(email, password, userName);
       setError("");
@@ -56,6 +60,7 @@ export default function Register() {
           placeholder="********"
           required
         />
+        {error && <p>{error}</p>}
         <button>Create account</button>
       </form>
     </section>
